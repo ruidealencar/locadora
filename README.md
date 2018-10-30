@@ -1,4 +1,4 @@
-# Locare - Sistema de Locadora de Veículos em PHP
+# Locadora de Veículos
 
 ## Tecnologias utilizadas
 
