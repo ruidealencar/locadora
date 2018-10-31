@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/locadora_veiculos/app/db/conexao.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/locadora/app/db/conexao.php';
     $query = $conexao->query("SELECT LOC_CODIGO, LOC_DATA_LOCACAO, LOC_DATA_ENTREGA, LOC_CAR_CODIGO, LOC_CLI_CODIGO, LOC_FUN_CODIGO, LOC_ODOMETRO_INICIAL, tb_locacoes.LOC_ODOMETRO_FINAL FROM tb_locacoes;");
 ?>
 
@@ -65,7 +65,7 @@
                 </tbody>
             </table>
             <div class="card-footer">
-                <a href=<?php echo "/locadora_veiculos/app/paginas/locacoes/cadastro.php"; ?> class="btn btn-primary btn-sm">Nova locação</a>
+                <a href=<?php echo "/locadora/app/paginas/locacoes/cadastro.php"; ?> class="btn btn-primary btn-sm">Nova locação</a>
             </div>
         </div>
     </div>
