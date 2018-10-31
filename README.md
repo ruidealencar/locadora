@@ -4,7 +4,7 @@
 
 - Linguagem PHP
 - Banco de dados MySQL
-- Bootstrap para estilizar as páginas
+- Bootstrap para estilizar as página
 
 ## Estrutura do projeto
 
