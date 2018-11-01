@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
-<body>
+<body background="https://www.jutarnji.hr/autoklub/aktualno/bmw-tricajpg/7722120/alternates/LANDSCAPE_980/bmw%20trica.jpg" bgproperties="fixed">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Locadora</a>
+    <a class="navbar-brand" href="http://localhost:8081/locadora">WJR² - Locadora de Veículos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
