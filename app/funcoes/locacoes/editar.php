@@ -11,12 +11,12 @@
     $loc_fun_codigo       = $_POST['loc_fun_codigo'];
 
     $comando = $conexao->prepare("UPDATE TB_LOCACOES SET LOC_DATA_LOCACAO = '{$loc_data_locacao}', ".
-                                 "LOC_DATA_ENTREGA = {$loc_data_entrega}, ".
-                                 "LOC_ODOMETRO_INICIAL = {$loc_odometro_inicial}, ".
-                                 "LOC_ODOMETRO_FINAL = {$loc_odometro_final}, ".
-                                 "LOC_CAR_CODIGO = {$loc_car_codigo}, ".
-                                 "LOC_CLI_CODIGO = {$loc_cli_codigo}, ".
-                                 "LOC_FUN_CODIGO = {$loc_fun_codigo} WHERE LOC_CODIGO = {$loc_codigo}");
+                                "LOC_DATA_ENTREGA = {$loc_data_entrega}, ".
+                                "LOC_ODOMETRO_INICIAL = {$loc_odometro_inicial}, ".
+                                "LOC_ODOMETRO_FINAL = {$loc_odometro_final}, ".
+                                "LOC_CAR_CODIGO = {$loc_car_codigo}, ".
+                                "LOC_CLI_CODIGO = {$loc_cli_codigo}, ".
+                                "LOC_FUN_CODIGO = {$loc_fun_codigo} WHERE LOC_CODIGO = {$loc_codigo}");
     $comando->execute();
     
     header('Location: /locadora?pagina=app/paginas/locacoes/listagem.php'); 

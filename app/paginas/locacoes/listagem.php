@@ -1,6 +1,10 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'].'/locadora/app/db/conexao.php';
-    $query = $conexao->query("SELECT LOC_CODIGO, LOC_DATA_LOCACAO, LOC_DATA_ENTREGA, LOC_CAR_CODIGO, LOC_CLI_CODIGO, LOC_FUN_CODIGO, LOC_ODOMETRO_INICIAL, tb_locacoes.LOC_ODOMETRO_FINAL FROM tb_locacoes;");
+    $query = $conexao->query("SELECT LOC_CODIGO, CAR_MODELO, CLI_NOME, LOC_DATA_LOCACAO, LOC_DATA_ENTREGA, LOC_CAR_CODIGO, LOC_CLI_CODIGO, LOC_FUN_CODIGO, FUN_FUNCIONARIO, LOC_ODOMETRO_INICIAL, LOC_ODOMETRO_FINAL
+    FROM tb_locacoes 
+    inner join tb_carros c on LOC_CAR_CODIGO = CAR_CODIGO
+    inner join tb_clientes  on CLI_CODIGO = LOC_CLI_CODIGO
+    inner join tb_funcionarios  on FUN_CODIGO = LOC_FUN_CODIGO");
 ?>
 
 <!DOCTYPE html>

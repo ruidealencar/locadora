@@ -1,9 +1,9 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'].'/locadora/app/db/conexao.php';
     
-    $queryCarros        = $conexao->query("SELECT CAR_CODIGO, CAR_MODELO FROM TB_CARROS WHERE CAR_DISPONIVEL = 's'");
-    $queryClientes      = $conexao->query("SELECT CLI_CODIGO, CLI_NOME FROM TB_CLIENTES");
-    $queryFuncionarios  = $conexao->query("SELECT FUN_CODIGO, FUN_FUNCIONARIO FROM TB_FUNCIONARIOS WHERE FUN_DATA_DEMISSAO IS NULL");
+    $queryCarros = $conexao->query("SELECT CAR_CODIGO, CAR_MODELO FROM TB_CARROS WHERE CAR_DISPONIVEL = 's'");
+    $queryClientes = $conexao->query("SELECT CLI_CODIGO, CLI_NOME FROM TB_CLIENTES");
+    $queryFuncionarios = $conexao->query("SELECT FUN_CODIGO, FUN_FUNCIONARIO FROM TB_FUNCIONARIOS WHERE FUN_DATA_DEMISSAO IS NULL");
 ?>
 
 <!DOCTYPE html>
