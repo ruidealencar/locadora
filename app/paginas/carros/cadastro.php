@@ -6,6 +6,22 @@
     $queryMarcas  = $conexao->query("SELECT MAR_CODIGO, MAR_MARCA FROM TB_MARCAS");
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRUD com Bootstrap</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div class="container">
+
 <form action="/locadora/app/funcoes/carros/cadastrar.php" method="post">
     <div class="card">
         <div class="card-header">

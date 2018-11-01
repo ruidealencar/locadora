@@ -2,6 +2,21 @@
     include $_SERVER['DOCUMENT_ROOT'].'/locadora/app/db/conexao.php';
     $query = $conexao->query("SELECT BAI_CODIGO, BAI_BAIRRO FROM TB_BAIRROS");
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRUD com Bootstrap</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div class="container">
 
 <form action="/locadora/app/funcoes/clientes/cadastrar.php" method="post">
     <div class="card">
