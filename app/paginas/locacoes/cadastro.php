@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
 
 </head>
-<body>
+<body background="https://www.jutarnji.hr/autoklub/aktualno/bmw-tricajpg/7722120/alternates/LANDSCAPE_980/bmw%20trica.jpg" bgproperties="fixed">
 
     <div class="container">
 
