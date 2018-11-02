@@ -7,6 +7,7 @@
     $queryClientes      = $conexao->query("SELECT CLI_CODIGO, CLI_NOME FROM TB_CLIENTES");
     $queryFuncionarios  = $conexao->query("SELECT FUN_CODIGO, FUN_FUNCIONARIO FROM TB_FUNCIONARIOS WHERE FUN_DATA_DEMISSAO IS NULL");
     $queryLocacao       = $conexao->query("SELECT LOC_CODIGO, LOC_DATA_LOCACAO, LOC_ODOMETRO_INICIAL, LOC_CAR_CODIGO, LOC_CLI_CODIGO, LOC_FUN_CODIGO FROM TB_LOCACOES WHERE LOC_CODIGO = {$loc_codigo}");
+    $queryPagamentos = $conexao->query("SELECT PAGAMENTO_CODIGO, PAGAMENTO_PAGAMENTO FROM TB_FORMA_PAGAMENTO");
     $locacao = $queryLocacao->fetch(PDO::FETCH_ASSOC);
 ?>
 
@@ -54,6 +55,18 @@
                     <?php while($cliente = $queryClientes->fetch(PDO::FETCH_ASSOC)){ ?>
                         <option value="<?php echo $cliente['CLI_CODIGO']; ?>" <?php if($cliente['CLI_CODIGO'] == $locacao['LOC_CLI_CODIGO']) echo 'selected'; ?>>
                             <?php echo $cliente['CLI_NOME']; ?>
+                        </option>
+                    <?php } ?>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="pagamento_pagamento">Forma de Pagamento</label>
+                    <select name="pagamento_pagamento" class="form-control">
+                    <?php while($pagamento = $queryPagamentos->fetch(PDO::FETCH_ASSOC)){ ?>
+                        <option value="<?php echo $pagamento['PAGAMENTO_CODIGO']; ?>">
+                            <?php echo $pagamento['PAGAMENTO_PAGAMENTO']; ?>
                         </option>
                     <?php } ?>
                     </select>

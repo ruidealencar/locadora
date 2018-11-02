@@ -3,27 +3,10 @@
     
     $queryCarros = $conexao->query("SELECT CAR_CODIGO, CAR_MODELO FROM TB_CARROS WHERE CAR_DISPONIVEL = 's'");
     $queryClientes = $conexao->query("SELECT CLI_CODIGO, CLI_NOME FROM TB_CLIENTES");
+    $queryPagamentos = $conexao->query("SELECT PAGAMENTO_CODIGO, PAGAMENTO_PAGAMENTO FROM TB_FORMA_PAGAMENTO");
     $queryFuncionarios = $conexao->query("SELECT FUN_CODIGO, FUN_FUNCIONARIO FROM TB_FUNCIONARIOS WHERE FUN_DATA_DEMISSAO IS NULL");
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>CRUD com Bootstrap</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-
-    <style>
-        body{
-            background-repeat: no-repeat;
-            background-position: center;
-        } 
-    </style>
-
-</head>
 <body background="https://www.jutarnji.hr/autoklub/aktualno/bmw-tricajpg/7722120/alternates/LANDSCAPE_980/bmw%20trica.jpg">
 
     <div class="container">
@@ -63,6 +46,18 @@
                     <?php while($cliente = $queryClientes->fetch(PDO::FETCH_ASSOC)){ ?>
                         <option value="<?php echo $cliente['CLI_CODIGO']; ?>">
                             <?php echo $cliente['CLI_NOME']; ?>
+                        </option>
+                    <?php } ?>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="pagamento_pagamento">Forma de Pagamento</label>
+                    <select name="pagamento_pagamento" class="form-control">
+                    <?php while($pagamento = $queryPagamentos->fetch(PDO::FETCH_ASSOC)){ ?>
+                        <option value="<?php echo $pagamento['PAGAMENTO_CODIGO']; ?>">
+                            <?php echo $pagamento['PAGAMENTO_PAGAMENTO']; ?>
                         </option>
                     <?php } ?>
                     </select>
