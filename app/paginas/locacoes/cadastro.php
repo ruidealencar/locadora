@@ -14,11 +14,17 @@
     <title>CRUD com Bootstrap</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
 
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-position: center;
+        } 
+    </style>
+
 </head>
-<body background="https://www.jutarnji.hr/autoklub/aktualno/bmw-tricajpg/7722120/alternates/LANDSCAPE_980/bmw%20trica.jpg" bgproperties="fixed">
+<body background="https://www.jutarnji.hr/autoklub/aktualno/bmw-tricajpg/7722120/alternates/LANDSCAPE_980/bmw%20trica.jpg">
 
     <div class="container">
 

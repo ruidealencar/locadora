@@ -39,6 +39,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/locadora?pagina=app/paginas/marcas/listagem.php">Marcas</a>
             <a class="dropdown-item" href="/locadora?pagina=app/paginas/cores/listagem.php">Cores</a>
+            <a class="dropdown-item" href="/locadora?pagina=app/paginas/forma_pagamento/listagem.php">Forma de pagamento</a>
             <a class="dropdown-item" href="/locadora?pagina=app/paginas/estados/listagem.php">Estados de conservação</a>
           </div>
         </li>
