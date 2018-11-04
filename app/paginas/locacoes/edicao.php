@@ -25,7 +25,7 @@
                 </div>
                 <div class="col">
                     <label for="loc_data_entrega">Data da entrega</label>
-                    <input type="date" value="" class="form-control" name="loc_data_entrega"> 
+                    <input type="date" value="" class="form-control" name="loc_data_entrega" required="required"> 
                 </div>
                 <div class="col">
                     <label for="loc_odometro_inicial">Odômetro inicial</label>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col">
                     <label for="loc_odometro_final">Odômetro final</label>
-                    <input type="number" value="" class="form-control" name="loc_odometro_final"> 
+                    <input type="number" value="" class="form-control" name="loc_odometro_final" required="required"> 
                 </div>
             </div>
             <div class="row">
@@ -60,18 +60,7 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <label for="pagamento_pagamento">Forma de Pagamento</label>
-                    <select name="pagamento_pagamento" class="form-control">
-                    <?php while($pagamento = $queryPagamentos->fetch(PDO::FETCH_ASSOC)){ ?>
-                        <option value="<?php echo $pagamento['PAGAMENTO_CODIGO']; ?>">
-                            <?php echo $pagamento['PAGAMENTO_PAGAMENTO']; ?>
-                        </option>
-                    <?php } ?>
-                    </select>
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col">
                     <label for="loc_fun_codigo">Funcionário</label>
@@ -86,7 +75,7 @@
             </div>
         </div>
         <div class="card-footer">
-            <input type="submit" class="btn btn-primary" value="Editar">
+            <input type="submit" class="btn btn-primary" value="Devolver">
         </div>
     </div>
 </form>

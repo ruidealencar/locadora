@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col">
                     <label for="fun_funcionario">Nome do funcionário</label>
-                    <input type="text" value="<?php echo $funcionario['FUN_FUNCIONARIO']; ?>" class="form-control" name="fun_funcionario" autofocus> 
+                    <input type="text" value="<?php echo $funcionario['FUN_FUNCIONARIO']; ?>" class="form-control" name="fun_funcionario" required="required" autofocus> 
                 </div>
             </div>
             <div class="row">

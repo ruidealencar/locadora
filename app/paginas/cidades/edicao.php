@@ -14,7 +14,7 @@
             <input type="hidden" value="<?php echo $cidade['CID_CODIGO']?>" name="cid_codigo">
 
             <label for="cor_cor">Nome da cidade</label>
-            <input type="text" value="<?php echo $cidade['CID_CIDADE']; ?>" class="form-control" name="cid_cidade" autofocus> 
+            <input type="text" value="<?php echo $cidade['CID_CIDADE']; ?>" class="form-control" name="cid_cidade" required="required" autofocus> 
         </div>
         <div class="card-footer">
             <input type="submit" class="btn btn-primary" value="Editar">

@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
             <label for="cor_cor">Nome da cidade</label>
-            <input type="text" value="" class="form-control" name="cid_cidade" autofocus> 
+            <input type="text" value="" class="form-control" name="cid_cidade" required="required" autofocus> 
         </div>
         <div class="card-footer">
             <input type="submit" class="btn btn-primary" value="Cadastrar">

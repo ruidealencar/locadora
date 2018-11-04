@@ -21,5 +21,5 @@
                                 "LOC_FUN_CODIGO = {$loc_fun_codigo} WHERE LOC_CODIGO = {$loc_codigo}");
     $comando->execute();
     
-    header('Location: /locadora?pagina=app/paginas/locacoes/listagem.php'); 
+    header('Location: /locadora?pagina=app/paginas/locacoes/listagem_devolucao.php'); 
 ?>

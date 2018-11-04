@@ -18,25 +18,25 @@
         <div class="row">
             <div class="col">
                 <label for="cli_nome">Nome do cliente</label>
-                <input type="text" value="<?php echo $cliente['CLI_NOME']; ?>" class="form-control" name="cli_nome" autofocus> 
+                <input type="text" value="<?php echo $cliente['CLI_NOME']; ?>" class="form-control" name="cli_nome" required="required" autofocus> 
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="cli_documento">Documento</label>
-                <input type="text" value="<?php echo $cliente['CLI_DOCUMENTO']; ?>" class="form-control" name="cli_documento"> 
+                <input type="text" value="<?php echo $cliente['CLI_DOCUMENTO']; ?>" class="form-control" name="cli_documento" required="required"> 
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="cli_email">Email</label>
-                <input type="text" value="<?php echo $cliente['CLI_EMAIL']; ?>" class="form-control" name="cli_email"> 
+                <input type="text" value="<?php echo $cliente['CLI_EMAIL']; ?>" class="form-control" name="cli_email" required="required"> 
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="cli_endereco">Endereço</label>
-                <input type="text" value="<?php echo $cliente['CLI_ENDERECO']; ?>" class="form-control" name="cli_endereco"> 
+                <input type="text" value="<?php echo $cliente['CLI_ENDERECO']; ?>" class="form-control" name="cli_endereco" required="required"> 
             </div>
         </div>
         <div class="row">

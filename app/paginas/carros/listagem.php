@@ -16,7 +16,7 @@
                 <th>Quilometragem</th>
                 <th>Cor</th>
                 <th>Marca</th>
-                <th>Estado</th>                
+                <th>Estado de Conservação</th>               
                 <th></th>
             </tr>
         </thead>

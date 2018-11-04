@@ -20,11 +20,11 @@
             <div class="row">
                 <div class="col">
                     <label for="loc_data_locacao">Data da locação</label>
-                    <input type="date" value="" class="form-control" name="loc_data_locacao" autofocus> 
+                    <input type="date" value="" class="form-control" name="loc_data_locacao" required="required" autofocus> 
                 </div>
                 <div class="col">
                     <label for="loc_odometro_inicial">Odômetro inicial</label>
-                    <input type="number" value="" class="form-control" name="loc_odometro_inicial" autofocus> 
+                    <input type="number" value="" class="form-control" name="loc_odometro_inicial" required="required" autofocus > 
                 </div>
             </div>
             <div class="row">

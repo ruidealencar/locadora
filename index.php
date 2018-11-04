@@ -9,9 +9,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Locadora</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <style>
+    #imagem{
+      margin-top: -100px;
+      display: table;
+      width: 100%;
+      height: 100vh;
+      padding: 100px 0;
+      background: url("https://i0.wp.com/www.rcaconsorcio.com.br/wp-content/uploads/2016/04/carros.png?ssl=1") no-repeat bottom center scroll;
+      background-position: 30% 45%;
+      background-size: cover; 
+    }
+  </style>
 </head>
 
-<body background="https://www.jutarnji.hr/autoklub/aktualno/bmw-tricajpg/7722120/alternates/LANDSCAPE_980/bmw%20trica.jpg" bgproperties="fixed">
+<body id="imagem">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="http://localhost:8081/locadora">WJR² - Locadora de Veículos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,7 +34,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/locadora?pagina=app/paginas/locacoes/listagem.php">Locações</a>  
+          <a class="nav-link" href="/locadora?pagina=app/paginas/locacoes/listagem.php">Reservas</a>  
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/locadora?pagina=app/paginas/locacoes/listagem_devolucao.php">Devoluções</a>  
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -39,8 +54,9 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/locadora?pagina=app/paginas/marcas/listagem.php">Marcas</a>
             <a class="dropdown-item" href="/locadora?pagina=app/paginas/cores/listagem.php">Cores</a>
-            <a class="dropdown-item" href="/locadora?pagina=app/paginas/forma_pagamento/listagem.php">Forma de pagamento</a>
             <a class="dropdown-item" href="/locadora?pagina=app/paginas/estados/listagem.php">Estados de conservação</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/locadora?pagina=app/paginas/forma_pagamento/listagem.php">Forma de pagamento</a>
           </div>
         </li>
       </ul>
@@ -49,6 +65,7 @@
   <div class="container">
     <?php if (isset($pagina)) include $pagina; ?>
   </div>
+
   <script src="assets/js/jquery-3.2.1.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>

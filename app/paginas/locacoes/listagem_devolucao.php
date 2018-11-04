@@ -19,10 +19,11 @@
             <table class="table table-hover table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Código</th>
                         <th>Data da locação</th>
+                        <th>Data da devolução</th>
                         <th>Carro</th>
                         <th>Odômetro inicial</th>
+                        <th>Odômetro final</th>
                         <th>Cliente</th>
                         <th>Forma de Pagamento</th>
                         <th>Funcionário</th>                
@@ -31,18 +32,21 @@
                 </thead>
                 <tbody>
                     <?php while($locacao = $query->fetch(PDO::FETCH_ASSOC)){ ?>
-                        <tr>
-                            <td>
-                                <?php echo $locacao['LOC_CODIGO']; ?>
-                            </td>
+                        <tr class="<?php echo $locacao['LOC_DATA_ENTREGA'] == '' ? 'text-danger':'text-success'; ?>">
                             <td>
                                 <?php echo $locacao['LOC_DATA_LOCACAO']; ?>
+                            </td>
+                            <td>
+                                <?php echo $locacao['LOC_DATA_ENTREGA']; ?>
                             </td>
                             <td>
                                 <?php echo $locacao['CAR_MODELO']; ?>
                             </td>
                             <td>
                                 <?php echo $locacao['LOC_ODOMETRO_INICIAL'].' Km'; ?>
+                            </td>
+                            <td>
+                                <?php echo $locacao['LOC_ODOMETRO_FINAL'].' Km'; ?>
                             </td>
                             <td>
                                 <?php echo $locacao['CLI_NOME']; ?>
@@ -54,14 +58,12 @@
                                 <?php echo $locacao['FUN_FUNCIONARIO']; ?>
                             </td>
                             <td>
-                                <a href=<?php echo "/locadora/?pagina=app/paginas/locacoes/exclusao.php&loc_codigo={$locacao['LOC_CODIGO']}"; ?> class="btn btn-danger btn-sm">Excluir</a>
+                                <a href=<?php echo "/locadora/?pagina=app/paginas/locacoes/edicao.php&loc_codigo={$locacao['LOC_CODIGO']}"; ?> class="btn btn-primary btn-sm">Devolver</a>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
-            <div class="card-footer">
-                <a href=<?php echo "/locadora/?pagina=app/paginas/locacoes/cadastro.php"; ?> class="btn btn-primary btn-sm">Nova locação</a>
-            </div>
+            
         </div>
     </div>
